@@ -33,7 +33,7 @@
     // 녹화 중지 버튼 이벤트
     document.getElementById('stop').addEventListener('click', function () {
         mediaRecorder.stop();
-        const blob = new Blob(recordedBlobs, { type: 'video/webm' });
+        const blob = new Blob(recordedBlobs, { type: 'video/mp4' });
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.style.display = 'none';
