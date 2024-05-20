@@ -9,8 +9,8 @@
 
 <body>
     <textarea name="" id=""></textarea>
-    <button id="rec">녹화1</button>
-    <button id="stop">중지1</button>
+    <button id="rec">녹화2</button>
+    <button id="stop">중지2</button>
 </body>
 <script>
     let mediaRecorder;
@@ -38,7 +38,7 @@
         const a = document.createElement('a');
         a.style.display = 'none';
         a.href = url;
-        a.download = 'recordedVideo.webm';
+        a.download = 'recordedVideo.mp4';
         document.body.appendChild(a);
         a.click();
         setTimeout(() => {
