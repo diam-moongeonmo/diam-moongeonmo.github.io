@@ -9,8 +9,8 @@
 
 <body>
     <textarea name="" id=""></textarea>
-    <button id="rec">녹화2</button>
-    <button id="stop">중지2</button>
+    <button id="rec">녹화</button>
+    <button id="stop">중지</button>
 </body>
 <script>
     let mediaRecorder;
@@ -33,12 +33,12 @@
     // 녹화 중지 버튼 이벤트
     document.getElementById('stop').addEventListener('click', function () {
         mediaRecorder.stop();
-        const blob = new Blob(recordedBlobs, { type: 'video/mp4' });
+        const blob = new Blob(recordedBlobs, { type: 'video/webm' });
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.style.display = 'none';
         a.href = url;
-        a.download = 'recordedVideo.mp4';
+        a.download = 'recordedVideo.webm';
         document.body.appendChild(a);
         a.click();
         setTimeout(() => {
